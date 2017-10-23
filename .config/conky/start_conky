@@ -1,0 +1,5 @@
+#!/bin/bash
+
+conky -c /home/philipp/.config/conky/conky_maia &&
+
+exit 0
