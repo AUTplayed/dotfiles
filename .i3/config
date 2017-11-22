@@ -346,32 +346,32 @@ set_from_resource $i3_color16 color16 #ffffff
 set_from_resource $i3_color17 color17 #0c0c0c
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	status_command i3status
-	position bottom
+#bar {
+#	status_command i3status
+#	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
 #	tray_output eDP1
 
-	bindsym button4 nop
-	bindsym button5 nop
-	font xft:Noto Sans 10.5
-	strip_workspace_numbers yes
+#	bindsym button4 nop
+#	bindsym button5 nop
+#	font xft:Noto Sans 10.5
+#	strip_workspace_numbers yes
 
-	colors {
+#	colors {
 #       background $transparent
-        background $i3_background
-        statusline $i3_text
-        separator  $i3_separator
+#        background $i3_background
+#        statusline $i3_text
+#        separator  $i3_separator
 
 #                                  border  backgr. text
-        focused_workspace   $i3_color1  $i3_color4  $i3_text
-        active_workspace    $i3_color2  $i3_color3  $i3_color5
-        inactive_workspace  $i3_color2  $i3_color3  $i3_color6
-        urgent_workspace    $i3_color4  $i3_color5  $i3_color7
-    }
-}
+#        focused_workspace   $i3_color1  $i3_color4  $i3_text
+#        active_workspace    $i3_color2  $i3_color3  $i3_color5
+#        inactive_workspace  $i3_color2  $i3_color3  $i3_color6
+#        urgent_workspace    $i3_color4  $i3_color5  $i3_color7
+#    }
+#}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
@@ -445,10 +445,11 @@ mode "$mode_gaps_outer" {
 
 
 #Custom shit
+.config/polybar/run_polybar.sh
 
 bindsym $mod+Mod1+Right move workspace to output right
 bindsym $mod+Mod1+Left move workspace to output left
-exec --no-startup-id /home/philipp/.config/conky/start_conky
+# exec --no-startup-id /home/philipp/.config/conky/start_conky
 
 exec --no-startup-id xrandr --output VGA1 --auto --right-of eDP1
 exec --no-startup-id xinput set-prop "SYN1B7E:01 06CB:2970 Touchpad" "libinput Natural Scrolling Enabled" 1
