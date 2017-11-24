@@ -445,7 +445,7 @@ mode "$mode_gaps_outer" {
 
 
 #Custom shit
-.config/polybar/run_polybar.sh
+exec --no-startup-id .config/polybar/run_polybar.sh
 
 bindsym $mod+Mod1+Right move workspace to output right
 bindsym $mod+Mod1+Left move workspace to output left
