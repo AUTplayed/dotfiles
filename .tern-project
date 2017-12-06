@@ -1,0 +1,14 @@
+{
+  "libs": [
+    "browser",
+    "jquery",
+    "ecmascript"
+  ],
+  "plugins": {
+    "requirejs": {
+      "baseURL": "./",
+      "paths": {}
+    },
+    "node": {}
+  }
+}
