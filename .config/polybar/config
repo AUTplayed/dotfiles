@@ -49,8 +49,8 @@ font-1 = Unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Wuncon Siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = 
-modules-right = filesystem xbacklight volume memory cpu wlan eth battery date
+modules-center = windowtitle
+modules-right = volume memory cpu wlan eth battery date
 
 tray-position = right
 tray-padding = 2
@@ -243,13 +243,13 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+format-volume = <label-volume>
+label-volume = ""
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+label-muted = ""
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+;label-muted = muted
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -351,5 +351,11 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+
+[module/windowtitle]
+type = custom/script
+
+exec = ~/.config/polybar/window_title.sh
+interval = 1.016
 
 ; vim:ft=dosini
