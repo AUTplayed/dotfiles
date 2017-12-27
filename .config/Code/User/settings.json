@@ -1,0 +1,18 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "git.enableSmartCommit": true,
+    "workbench.colorTheme": "Monokai",
+    "editor.renderWhitespace": "all",
+    "editor.insertSpaces": false,
+    "terminal.integrated.scrollback": 5000,
+    "git.ignoreLimitWarning": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "block",
+    "editor.dragAndDrop": false,
+    "editor.formatOnSave": true,
+    "editor.mouseWheelZoom": true,
+    "editor.smoothScrolling": false
+}
