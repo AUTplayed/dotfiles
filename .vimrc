@@ -55,6 +55,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
 Plugin 'valloric/youcompleteme'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Chiel92/vim-autoformat'
 
 syntax enable
 let g:solarized_termcolors=256
@@ -65,3 +66,4 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 call vundle#end()
 filetype plugin indent on
+au BufWrite * :Autoformat
