@@ -54,6 +54,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
 Plugin 'valloric/youcompleteme'
+Plugin 'airblade/vim-gitgutter'
 
 syntax enable
 let g:solarized_termcolors=256
