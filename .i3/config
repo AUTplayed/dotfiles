@@ -35,9 +35,6 @@ bindsym $mod+Shift+q kill
 # start program launcher
 # bindsym $mod+d exec --no-startup-id dmenu_recency
 
-# launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
-
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
@@ -377,7 +374,7 @@ set_from_resource $i3_color17 color17 #0c0c0c
 #}
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+# bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                 border      backgr.     text        indic.      child_border
@@ -466,3 +463,6 @@ assign [class="Moeditor"] $ws5
 exec --no-startup-id discord
 exec --no-startup-id telegram-desktop
 exec --no-startup-id betterlockscreen -u ~/Pictures/wallpaper
+
+bindsym $mod+Shift+m exec i3-input -F 'mark %s' -P 'Mark name: '
+bindsym $mod+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
