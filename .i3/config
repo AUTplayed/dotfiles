@@ -467,4 +467,4 @@ exec --no-startup-id betterlockscreen -u ~/Pictures/wallpaper
 bindsym $mod+Shift+m exec i3-input -F 'mark %s' -P 'Mark name: '
 bindsym $mod+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 bindsym Mod1+Tab workspace back_and_forth
-bindsym $mod+x exec --no-startup-id "slop -r boxzoom"
+bindsym $mod+x exec --no-startup-id "~/.config/slop/magnifier"
