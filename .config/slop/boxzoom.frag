@@ -10,10 +10,11 @@ varying vec2 uvCoord;
 void main()
 {
 	// Adjustable parameters -------
-	int size = 4192;
-	vec2 boxOffset = vec2(size/-2,size/-2);
-	vec2 boxSize = vec2(size,size);
-	float magstrength = 2;
+	int xsize = 5292;
+	int ysize = 3584;
+	vec2 boxOffset = vec2(xsize/-2,ysize/-2);
+	vec2 boxSize = vec2(xsize,ysize);
+	float magstrength = 3;
 	vec2 borderSize = vec2(1,1);
 	vec4 borderColor = vec4(0,0,0,1);
 	bool crosshair = false;

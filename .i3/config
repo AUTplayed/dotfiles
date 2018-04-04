@@ -127,11 +127,11 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+m move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+m scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -464,7 +464,5 @@ exec --no-startup-id discord
 exec --no-startup-id telegram-desktop
 exec --no-startup-id betterlockscreen -u ~/Pictures/wallpaper
 
-bindsym $mod+Shift+m exec i3-input -F 'mark %s' -P 'Mark name: '
-bindsym $mod+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+x exec --no-startup-id "~/.config/slop/magnifier"
