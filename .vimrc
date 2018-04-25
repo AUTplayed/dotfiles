@@ -24,7 +24,7 @@ set magic
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" Use spaces instead of tabs
+" Use tabs instead of spaces
 set noexpandtab
 
 " Be smart when using tabs ;)
@@ -43,6 +43,8 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+set enc=utf-8
+set fileencoding=utf-8
 
 set nocompatible
 filetype off
@@ -56,6 +58,12 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'valloric/youcompleteme'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()
+
+let g:airline_symbols_ascii=1
 
 syntax enable
 let g:solarized_termcolors=256
@@ -64,7 +72,9 @@ colorscheme solarized
 let g:javascript_plugin_jsdoc = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-call vundle#end()
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+
 filetype plugin indent on
 let blacklist = ['markdown', 'tex']
 au BufWrite * if index(blacklist, &ft) < 0 | :Autoformat
