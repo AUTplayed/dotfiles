@@ -9,7 +9,7 @@ set $mod Mod4
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window none
-new_float normal
+new_float none
 
 # Hide borders
 hide_edge_borders none
@@ -31,9 +31,6 @@ bindsym $mod+Return exec terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start program launcher
-# bindsym $mod+d exec --no-startup-id dmenu_recency
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -58,39 +55,20 @@ bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id imgur-screenshot --keep-file false --open false
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-# bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
-# Early custom stuff
+# Set wallpaper and change colorscheme
 exec --no-startup-id wal -i ~/Pictures/wallpaper/
 
 # focus_follows_mouse no
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
+# move window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -98,8 +76,6 @@ bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
@@ -142,11 +118,11 @@ bindsym $mod+Ctrl+Left workspace prev
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
 set $ws1 1
-set $ws2 2:
-set $ws3 3:
+set $ws2 2
+set $ws3 3
 set $ws4 4
-set $ws5 5:
-set $ws6 6:
+set $ws5 5
+set $ws6 6
 set $ws7 7
 set $ws8 8
 
@@ -181,10 +157,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -193,26 +166,14 @@ for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
-for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-gtk-greeter-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
-for_window [title="MuseScore: Play Panel"] floating enable
-for_window [class="Nitrogen"] floating enable sticky enable border normal
-for_window [class="Oblogout"] fullscreen enable
-for_window [class="octopi"] floating enable
-for_window [title="About Pale Moon"] floating enable
-for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
-for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 # switch to workspace with urgent window automatically
@@ -245,24 +206,21 @@ mode "$mode_system" {
 }
 
 # Resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
-mode "resize" {
-# These bindings trigger as soon as you enter the resize mode
 # Pressing left will shrink the window’s width.
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-	bindsym j resize shrink width 5 px or 5 ppt
-		bindsym k resize grow height 5 px or 5 ppt
-		bindsym l resize shrink height 5 px or 5 ppt
-		bindsym semicolon resize grow width 5 px or 5 ppt
-
-# same bindings, but for the arrow keys
-		bindsym Left resize shrink width 10 px or 10 ppt
+bindsym $mod+r mode "resize"
+mode "resize" {
+	bindsym Left resize shrink width 10 px or 10 ppt
 		bindsym Down resize grow height 10 px or 10 ppt
 		bindsym Up resize shrink height 10 px or 10 ppt
 		bindsym Right resize grow width 10 px or 10 ppt
 
+		bindsym Shift+Left resize shrink width 30 px or 30 ppt
+		bindsym Shift+Down resize grow height 30 px or 30 ppt
+		bindsym Shift+Up resize shrink height 30 px or 30 ppt
+		bindsym Shift+Right resize grow width 30 px or 30 ppt
 # exit resize mode: Enter or Escape
 		bindsym Return mode "default"
 		bindsym Escape mode "default"
@@ -273,17 +231,10 @@ bindsym $mod+9 exec --no-startup-id betterlockscreen -l
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# exec --no-startup-id nitrogen --restore; sleep 1;
 exec --no-startup-id compton -b
-# exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-# exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-# exec --no-startup-id blueman
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker betterlockscreen -l
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -445,7 +396,7 @@ mode "$mode_gaps_outer" {
 
 
 # Custom stuff
-exec --no-startup-id .config/polybar/run_polybar.sh
+exec --no-startup-id ~/.scripts/run_polybar.sh
 
 bindsym $mod+Mod1+Right move workspace to output right
 bindsym $mod+Mod1+Left move workspace to output left
@@ -465,4 +416,11 @@ exec --no-startup-id telegram-desktop
 exec --no-startup-id betterlockscreen -u ~/Pictures/wallpaper
 
 bindsym Mod1+Tab workspace back_and_forth
-bindsym $mod+x exec --no-startup-id "~/.config/slop/magnifier"
+bindsym $mod+x exec --no-startup-id "~/.scripts/magnifier.sh"
+
+bindsym Print exec --no-startup-id "maim -s /tmp/screenshot.png && ~/.scripts/imgur.sh /tmp/screenshot.png"
+bindsym Shift+Print exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
+
+for_window [class="i3expod.py"] floating enable border none
+bindsym $mod+Tab exec --no-startup-id "killall -s SIGUSR1 i3expod.py"
+

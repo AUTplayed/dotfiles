@@ -355,7 +355,7 @@ margin-bottom = 5
 [module/windowtitle]
 type = custom/script
 
-exec = ~/.config/polybar/window_title.sh
+exec = ~/.scripts/window_title.sh
 interval = 1.016
 
 ; vim:ft=dosini
