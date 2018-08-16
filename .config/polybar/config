@@ -8,15 +8,20 @@
 ;=====================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+background = ${xrdb:color0}
+background-alt = ${xrdb:color0}
+foreground = ${xrdb:color7}
+foreground-alt = ${xrdb:color7}
+primary = ${xrdb:color1}
+secondary = ${xrdb:color2}
+alert = ${xrdb:color3}
+;background = #222
+;background-alt = #444
+;foreground = #dfdfdf
+;foreground-alt = #555
+;primary = #ffb52a
+;secondary = #e60053
+;alert = #bd2c40
 
 [bar/example]
 monitor = ${env:MONITOR:}
@@ -24,10 +29,11 @@ width = 100%
 height = 27
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
 fixed-center = false
 
-bottom=true
+enable-ipc = true
+bottom = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -49,7 +55,7 @@ font-1 = Unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Wuncon Siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = windowtitle
+modules-center = xwindow
 modules-right = volume memory cpu wlan eth battery date
 
 tray-position = right
@@ -70,7 +76,7 @@ tray-padding = 2
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:70:...%
 
 [module/filesystem]
 type = internal/fs
@@ -351,11 +357,5 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-[module/windowtitle]
-type = custom/script
-
-exec = ~/.scripts/window_title.sh
-interval = 1.016
 
 ; vim:ft=dosini

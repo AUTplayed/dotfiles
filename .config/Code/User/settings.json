@@ -14,5 +14,6 @@
     "editor.dragAndDrop": false,
     "editor.formatOnSave": true,
     "editor.mouseWheelZoom": true,
-    "editor.smoothScrolling": false
+    "editor.smoothScrolling": false,
+    "telemetry.enableTelemetry": false
 }

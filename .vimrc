@@ -77,7 +77,7 @@ let g:airline_solarized_bg='dark'
 
 filetype plugin indent on
 let blacklist = ['markdown', 'tex']
-au BufWrite * if index(blacklist, &ft) < 0 | :Autoformat
+" au BufWrite * if index(blacklist, &ft) < 0 | :Autoformat
 set updatetime=2000
 
 au BufRead,BufNewFile *.tex,*.md set noautoindent
