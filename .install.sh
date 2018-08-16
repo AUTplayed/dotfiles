@@ -7,7 +7,7 @@ else
 fi
 
 copyover() {
-	\cp -rf "$1" "$dest"
+	cp -rf "$1" "$dest"
 }
 
 shopt -s dotglob
