@@ -53,8 +53,9 @@ shopt -s expand_aliases
 export BROWSER=/usr/bin/google-chrome-stable
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export TERMINAL=urxvt
 
-alias ya='yaourt --noconfirm'
+alias ya='pacui i'
 alias cat='bat --style plain'
 alias ls='ls --color=auto'
 

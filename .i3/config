@@ -23,11 +23,14 @@ bindsym $mod+n border normal
 # is used in the bar {} block below.
 font xft:Noto Sans 10
 
+# Set kb layout
+exec setxkbmap -layout de
+
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
