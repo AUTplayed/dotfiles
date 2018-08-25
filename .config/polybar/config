@@ -56,7 +56,7 @@ font-2 = Wuncon Siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = xwindow
-modules-right = volume memory cpu wlan eth battery date
+modules-right = xbacklight volume memory cpu wlan eth battery date
 
 tray-position = right
 tray-padding = 2
@@ -158,7 +158,7 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label> <bar>
-label = BL
+label = ☼
 
 bar-width = 10
 bar-indicator = |
@@ -249,7 +249,7 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume>
+format-volume = <label-volume> <bar-volume> 
 label-volume = ""
 label-volume-foreground = ${root.foreground}
 
