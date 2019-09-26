@@ -40,3 +40,5 @@ URxvt*cursorBlink:                true
 URxvt*background:                 black
 URxvt*foreground:                 grey
 URxvt*saveLines:                  5000
+
+URxvt.perl-ext-common: font-size
