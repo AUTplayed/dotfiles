@@ -1,3 +1,6 @@
 [user]
-	email = fips.hem@gmail.com
-	name = AUTplayed
+	email = philipp.hemmelmayr@dynatrace.com
+	name = "Philipp Hemmelmayr"
+[core]
+	longpaths = true
+	autocrlf = false

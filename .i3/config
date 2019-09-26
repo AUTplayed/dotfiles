@@ -403,9 +403,7 @@ bindsym $mod+Mod1+Right move workspace to output right
 bindsym $mod+Mod1+Left move workspace to output left
 bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun,run -show combi -modi combi -theme-str '#prompt {enabled:false;}'"
 
-exec --no-startup-id xrandr --output VGA1 --auto --right-of eDP1
-exec --no-startup-id xinput set-prop "SYN1B7E:01 06CB:2970 Touchpad" "libinput Natural Scrolling Enabled" 1
-exec --no-startup-id xinput set-prop "SYN1B7E:01 06CB:2970 Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id /home/philipp/.screenlayout/layout.sh
 assign [class="discord"] $ws2
 assign [class="TelegramDesktop"] $ws2
 assign [class="Google-chrome"] $ws3
