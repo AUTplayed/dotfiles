@@ -54,6 +54,10 @@ export BROWSER=/usr/bin/google-chrome-stable
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERMINAL=urxvt
+export LIBVA_DRIVER_NAME=vdpau
+export LIBVA_DRIVER_NAME=nouveau
+export RUXIT_INTERNAL_JAVA_INJECTION=1
+
 
 alias ya='pacui i'
 alias cat='bat --style plain'

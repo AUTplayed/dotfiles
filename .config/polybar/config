@@ -249,6 +249,8 @@ label = %date% %time%
 [module/volume]
 type = internal/pulseaudio
 
+interval = 2
+
 format-volume = <label-volume> <bar-volume> 
 label-volume = ""
 label-volume-foreground = ${root.foreground}

@@ -4,3 +4,11 @@
 [core]
 	longpaths = true
 	autocrlf = false
+
+[alias]
+	# create a stable branch, it defaults to "stable" if you don't provide a branch name
+	co-stable = "!sh -c \"git fetch && git checkout $(git rev-list --tags='version_*' --max-count=1) -b ${1:-stable}\" -"
+	# rebase on latest stable version
+	rb-stable = "!git fetch && git rebase $(git rev-list --tags='version_*' --max-count=1)"
+	# show "unbuilt" stuff by me
+	unbuilt = "!git fetch && git log $(git rev-list --tags='version_*' --max-count=1)..origin/master --author='Philipp Hemmelmayr'"
