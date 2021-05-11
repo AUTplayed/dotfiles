@@ -54,10 +54,11 @@ export BROWSER=/usr/bin/google-chrome-stable
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERMINAL=urxvt
-export LIBVA_DRIVER_NAME=vdpau
-export LIBVA_DRIVER_NAME=nouveau
+#export LIBVA_DRIVER_NAME=vdpau
+#export LIBVA_DRIVER_NAME=nouveau
 export RUXIT_INTERNAL_JAVA_INJECTION=1
-
+export DT_INTERNAL_JAVA_INJECTION=1
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 
 alias ya='pacui i'
 alias cat='bat --style plain'
